@@ -1,0 +1,32 @@
+
+dl.dl { overflow:hidden; zoom:1; }
+dl.dl dt, dl.dl dd { overflow:hidden; zoom:1; }
+dl.dl dt { float:left; _display:inline; }
+dl.dl dd { float:right; _display:inline }
+
+
+
+.anythingSlider { width: 725px; height: 338px; position: relative; overflow: hidden;margin:0px auto; }
+.anythingSlider .tWrapper { width: 723px; height: 338px; margin: 0 0px; position: absolute; top: 0; left: 0; background: #fff; }
+.anythingSlider .tWrapper ul { width:9999px; height: 407px; list-style: none; position: absolute; top: 0; left: 0; margin: 0; }
+.anythingSlider ul li { display: block; float: left; padding: 0; height: 338px; width: 725px;}
+.anythingSlider .arrow { display: block; height: 60px; width: 60px; position: absolute; cursor: pointer; z-index: 100; }
+.anythingSlider .arrow div { background: url(../image/t_btnp.png) no-repeat; height: 60px; width: 60px; }
+.anythingSlider .forward { left: 420px; top: 165px; }
+.anythingSlider .back { left: 10px; top: 165px; }
+.anythingSlider .forward div { background-position: -143px -97px; }
+.anythingSlider .back div { background-position: 0 -97px; }
+.anythingSlider .forward:hover div { background-position: -143px 0; }
+.anythingSlider .back:hover div { background-position: 0 0; }
+.anythingSlider ul li dl { width: 725px; height:338px; }
+.tWrapper ul li dl dt { width: 454px; height: 342px; overflow: hidden; float: left; }
+.tWrapper ul li dl dd { width: 283px;  z-index: 10000; display: block; height: 338px; float: left; background: url(../image/t_ftb.gif) no-repeat; margin-left:-12px;}
+.tWrapper ul li dl dd h3 { line-height: 25px; padding: 5px 0 10px 0; font-weight: normal; font-size: 14px;}
+.tWrapper ul li dl dd p.hdx { color: #353535; padding-top: 8px; line-height: 22px; margin-left:30px; margin-top:10px; width:240px; height:128px; overflow:hidden; }
+.tWrapper ul li dl dd a { color: #353535; }
+.tWrapper ul li dl dd a:hover { color: #666; }
+#thumbNav { position: absolute; top: 310px; right: 450px; height: 13px; z-index: 500; }
+#thumbNav a, #thumbNav a:hover { cursor: pointer; overflow: hidden; float: left; display: inline-block; width: 13px; height: 13px; margin-right: 6px; background: url(../image/t_btnp.png) no-repeat 0px -186px; _background: url(../image/t_ftb.gif) no-repeat -138px -466px; font-size: 16px; font-family: "Verdana"; display: inline-block; }
+#thumbNav a.cur { color: #fff; background: url(../image/t_btnp.png) no-repeat -21px -186px; _background: url(../image/t_ftb.gif) no-repeat -138px -481px; }
+
+.bt{ font-size:18px; color:#353535; margin-left:30px; margin-top:20px;width:190px; height:47px; overflow:hidden;}
