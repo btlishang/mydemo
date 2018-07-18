@@ -1,122 +1,62 @@
+{% extends "article/base.html" %}
+{% load static %}
 
+{% block banner_img%}
 
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>第八届叶圣陶听说读写能力展示命题组第二次会议</title>
-<link href="http://www.yeshengtao.com/css/style.css" rel="stylesheet">
-<script type="text/javascript" src="http://www.yeshengtao.com/js/jquery.min.js"></script>
-<script type="text/javascript"  src="http://www.yeshengtao.com/js/nav.js"></script>
-<script type="text/javascript" src="http://www.yeshengtao.com/js/jquery-1.4.2.min.js"></script>
-<link type="text/css" rel="stylesheet" href="http://www.yeshengtao.com/css/reset_v2.css">
-<link href="http://www.yeshengtao.com/css/style-videojs.css" rel="stylesheet">
-<script src="http://www.yeshengtao.com/js/video.min.js"></script>
-</head>
+<div class="banner"><img src="http://www.yeshengtao.com/images/banner02.jpg" width="1600" height="255"> </div>
 
-<body>
-<div class="bannerbox">
+{% endblock %}
 
-  <div class="topbox">
-    <div class="top">
-      <div class="logobox"> <img src="http://image.yeshengtao.com/images/logo.png"> </div>
-      <div class="float_r" style="margin-top:45px;"> <img src="http://image.yeshengtao.com/images/tel.png"> </div>
-      <div class="clear"></div>
-    </div>
-  </div>
-  <!--导航开始-->
-  <div class="nav">
-    <div class="nav_z">
-      <div class="navtext">
-        <ul id="navul" class="cl">
-
-           <li><a href="http://www.yeshengtao.com"><span>首页</span></a></li>
-           <li class="action">
-           <a href="http://www.yeshengtao.com/introduce/message/"><span>活动介绍</span></a>
-
-            <ul>
-              <li><a href="http://www.yeshengtao.com/introduce/message/">活动动态</a></li>
-              <li><a href="http://www.yeshengtao.com/introduce/about/">关于活动</a></li>
-              <li><a href="http://www.yeshengtao.com/introduce/login/">报名方式</a></li>
-            </ul>
-          </li>
-           <li> <a href="http://www.yeshengtao.com/show/"><span>本届风采</span></a> </li>
-           <li> <a href="http://www.yeshengtao.com/history/"><span>往届回顾</span></a> </li>
-           <li> <a href="http://www.yeshengtao.com/question/"><span>往届题库</span></a> </li>
-           <li> <a href="http://www.yeshengtao.com/well/"><span>优秀作品</span></a> </li>
-           <li> <a href="http://www.yeshengtao.com/join/"><span>加入我们</span></a> </li>
-        </ul>
-        <div class="clear"></div>
-      </div>
-    </div>
-  </div>
-  <!--导航结束-->
-
-  <div class="banner"><img src="http://www.yeshengtao.com/images/banner02.jpg" width="1600" height="255"> </div>
-</div>
+{% block main %}
 <div id="main"> 
-  <!--cookie-->
-  <div id="cook">
-    <div class="cook">您当前的位置：<a href="http://www.yeshengtao.com/">首页</a> &nbsp;&nbsp;>&nbsp;&nbsp;<a href="#">活动动态</a></div>
-    <div class="cook_line"></div>
-  </div>
-  <div id="cont"> 
-    <!--left-->
-  <div id="left" style="margin-right:40px;">
-      <div class="leftbt">
-       <img src="http://www.yeshengtao.com/images/bt01.png"></div>
+    <!--cookie-->
+    <div id="cook">
+        <div class="cook">您当前的位置：<a href="http://www.yeshengtao.com/">首页</a> &nbsp;&nbsp;>&nbsp;&nbsp;<a href="#">活动动态</a></div>
+        <div class="cook_line"></div>
+    </div>
+
+    <div id="cont">
+        <!--left-->
+        <div id="left" style="margin-right:40px;">
+            <div class="leftbt">
+            <img src="http://www.yeshengtao.com/images/bt01.png">
+            </div>
 
             <div class="l_list">
-        <ul>
-          <li class="l_action"><a href="http://www.yeshengtao.com/introduce/message/">活动动态</a></li>
-          <li><a href="http://www.yeshengtao.com/introduce/about/">关于活动</a></li>
-          <li><a href="http://www.yeshengtao.com/introduce/login/">报名方式</a></li>
-          <li><a href="http://www.yeshengtao.com/introduce/review/">评审方式</a></li>
-          <li><a href="http://www.yeshengtao.com/introduce/prize/">奖项设立</a></li>
-        </ul>
-      </div>
-      
-      
-</div>
-    <!--right-->
-    <div id="right">
-      <div class="right">
-        <div class="title">
-                    <ul>
-            <li class="font24">活动动态</li>
-            <li class="font18 title_en">News</li>
-          </ul>
-                    <div class="clear"></div>
-          <div class="r_line"></div>
-        </div>
-        <div class="r_cont">
-          <div class="nr">
-            <div class="nr_bt">第八届叶圣陶听说读写能力展示命题组第二次会议</div>
-            <div class="date">2017 年03 月30 日</div>
-            <div class="clear"></div>
-            <p style="text-align: center;">&nbsp;<img src="http://image.yeshengtao.com/image/20170330/2121.jpg" alt="" width="350" height="150" /></p>
-<p style="text-align: center;">命题组会议现场</p>
-<p style="text-align: left;">&nbsp; &nbsp; &nbsp; 2017年3月29号，第八届叶圣陶中小学生听书读写能力展示命题组召开会议，现场各位命题老师汇报了命题进度，并将部分题型进行展示，分享在命题过程中的思考。同时，各位老师对大赛同步辅导资料进行了商讨，研究了在线答题模式，制定了下一步工作安排以及时间安排，为大赛保驾护航。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="clear"></div>
-  </div>
-</div>
-
-<!--foot-->
-<div id="foot">
-	<div class="footbox">
-	  <div class="foot">
-	    <div class="footbt"> <span><a href="http://www.yeshengtao.com/introduce/message/">活动介绍</a></span> <span><a href="http://www.yeshengtao.com/show/">本届风采</a></span> <span><a href="http://www.yeshengtao.com/history/">往届回顾</a></span> <span><a href="http://www.yeshengtao.com/question/">往届题库</a></span> <span><a href="http://www.yeshengtao.com/well/">优秀作品</a></span> <span><a href="http://www.yeshengtao.com/join/">加入我们</a></span> </div>
-	    <div class="foottext" style="text-align:center">北京龙杯信息技术有限公司&nbsp;&nbsp;|&nbsp;&nbsp;yeshengtao@longbei.com&nbsp;&nbsp;|&nbsp;&nbsp;北京市海淀区上地三街金隅嘉华大厦B座911A室
-            <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1264442331'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1264442331%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+                <ul>
+                    <li class="l_action"><a href="http://www.yeshengtao.com/introduce/message/">活动动态</a></li>
+                    <li><a href="http://www.yeshengtao.com/introduce/about/">关于活动</a></li>
+                    <li><a href="http://www.yeshengtao.com/introduce/login/">报名方式</a></li>
+                    <li><a href="http://www.yeshengtao.com/introduce/review/">评审方式</a></li>
+                    <li><a href="http://www.yeshengtao.com/introduce/prize/">奖项设立</a></li>
+                </ul>
             </div>
-	  </div>
-	</div>
-</div>
+        </div>
+        <!--right-->
+        <div id="right">
+            <div class="right">
+                <div class="title">
+                    <ul>
+                        <li class="font24">活动动态</li>
+                        <li class="font18 title_en">News</li>
+                    </ul>
+                    <div class="clear"></div>
+                    <div class="r_line"></div>
+                </div>
 
-<script type="text/javascript" src="js/index_v3_a1.js"></script>
-</body>
-</html>
+                <div class="r_cont">
+
+                    <div class="nr">
+                        <div class="nr_bt">{{content.title}}</div>
+                        <div class="date">{{content.modified_time | date:"Y-m-d H:i:s"}}</div>
+                        <div class="clear"></div>
+                        {{content.body}}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+{% endblock %}

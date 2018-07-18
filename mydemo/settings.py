@@ -37,10 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'article',
+
     'ckeditor', # 富文本
     'ckeditor_uploader',
-
 
     'django_mptt_admin',
 ]
@@ -134,6 +135,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+DATETIME_FORMAT = 'Y-m-d H:i:s' # admin时间格式
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
@@ -171,7 +173,23 @@ CKEDITOR_CONFIGS = {
         ],
         # 插件
         'extraPlugins': ','.join(['codesnippet','uploadimage','widget','lineutils',]),
-    }
+    },
+     # 名为custom的配置
+    'custom': {
+        # 使用简体中文
+        'language':'zh-cn',
+        # 编辑器的宽高请根据你的页面自行设置
+        'width':'730px',
+        'height':'200px',
+        'tabSpaces': 4,
+        'toolbar': 'Custom',
+        # 添加按钮在这里
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline', 'Format', 'RemoveFormat'],
+            ['NumberedList', 'BulletedList'],
+            ['Blockquote', 'CodeSnippet'],
+        ],
+    },
 }
 
 
