@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django_mptt_admin.admin import DjangoMpttAdmin
-from .models import Category,Content,Banner
+from .models import Category,Content,Banner,Img
 
 # Register your models here.
 
@@ -18,7 +18,7 @@ class Contentadmin(admin.ModelAdmin):
         else:
             return '否'
 
-    list_display = ['id','title','created_time','modified_time','category','author',show]
+    list_display = ['id','title','created_time','modified_time','category','author','isshow']
 
     # 设置需要添加<a>标签的字段
     list_display_links = ['title']
@@ -37,5 +37,18 @@ admin.site.site_title = '博客后台管理'
 @admin.register(Banner)
 class Banneradmin(admin.ModelAdmin):
 
-    list_display = ['title', 'image']
+
+    def category(self):
+        if self.category:
+            return '首页'
+        else:
+            return '其他页'
+
+    list_display = ['title','image',category,'isshow']
     list_display_links = ('title',)
+
+@admin.register(Img)
+class Imgadmin(admin.ModelAdmin):
+
+    list_display = ['id', 'image','isshow']
+    list_display_links = ('id',)

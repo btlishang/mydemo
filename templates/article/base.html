@@ -30,9 +30,9 @@
             <div class="nav_z">
               <div class="navtext">
                 <ul id="navul" class="cl">
-                    <li class="action"> <a href="http://www.yeshengtao.com"><span>首页</span></a></li>
-                    <li>
-                        <a href="http://www.yeshengtao.com/introduce/message/"><span>活动介绍</span></a>
+                    <li {% if request.path == '/' %}class="action"{% endif %}><a href="/"><span>首页</span></a></li>
+                    <li {% if request.path == '/category/2/' %}class="action"{% endif %}>
+                        <a href="/category/2/"><span>活动介绍</span></a>
                         <ul>
                             <li><a href="http://www.yeshengtao.com/introduce/message/">活动动态</a></li>
                             <li><a href="http://www.yeshengtao.com/introduce/about/">关于活动</a></li>
@@ -55,7 +55,8 @@
          {% block banner_img %}{% endblock banner_img%}
     </div>
 
-    {% block main %}{% endblock%}
+    {% block main %}
+    {% endblock%}
 
     <!--foot-->
 

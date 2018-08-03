@@ -1,184 +1,91 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>第九届叶圣陶 听说读写 本届风采</title>
-<link href="http://www.yeshengtao.com/css/style.css" rel="stylesheet">
-<script type="text/javascript" src="http://www.yeshengtao.com/js/jquery.min.js"></script>
-<script type="text/javascript"  src="http://www.yeshengtao.com/js/nav.js"></script>
-<script type="text/javascript" src="http://www.yeshengtao.com/js/jquery-1.4.2.min.js"></script>
-<link type="text/css" rel="stylesheet" href="http://www.yeshengtao.com/css/reset_v2.css">
-</head>
+{% extends "article/base.html" %}
+{% load static %}
 
-<body>
-<div class="bannerbox">
+{% block banner_img%}
 
-   <div class="topbox">
-    <div class="top">
-      <div class="logobox"> <img src="http://image.yeshengtao.com/images/logo.png"> </div>
-      <div class="float_r" style="margin-top:45px;"> <img src="http://image.yeshengtao.com/images/tel.png"> </div>
-      <div class="clear"></div>
-    </div>
-  </div>
-  <!--导航开始-->
-  <div class="nav">
-    <div class="nav_z">
-      <div class="navtext">
-        <ul id="navul" class="cl">
+<div class="banner"><img src="http://www.yeshengtao.com/images/banner02.jpg" width="1600" height="255"> </div>
 
-           <li><a href="http://www.yeshengtao.com"><span>首页</span></a></li>
-           <li>
-           <a href="http://www.yeshengtao.com/introduce/message/"><span>活动介绍</span></a>
+{% endblock %}
 
-            <ul>
-              <li><a href="http://www.yeshengtao.com/introduce/message/">活动动态</a></li>
-              <li><a href="http://www.yeshengtao.com/introduce/about/">关于活动</a></li>
-              <li><a href="http://www.yeshengtao.com/introduce/login/">报名方式</a></li>
-            </ul>
-          </li>
-            <li class="action">  <a href="http://www.yeshengtao.com/show/"><span>本届风采</span></a> </li>
-           <li> <a href="http://www.yeshengtao.com/history/"><span>往届回顾</span></a> </li>
-           <li> <a href="http://www.yeshengtao.com/question/"><span>往届题库</span></a> </li>
-           <li> <a href="http://www.yeshengtao.com/well/"><span>优秀作品</span></a> </li>
-           <li> <a href="http://www.yeshengtao.com/join/"><span>加入我们</span></a> </li>
-        </ul>
-        <div class="clear"></div>
-      </div>
-    </div>
-  </div>
-  <!--导航结束-->
-
-  <div class="banner"><img src="http://www.yeshengtao.com/images/banner02.jpg" width="1600" height="255"> </div>
-</div>
+{% block main%}
 <div id="main"> 
-  <!--cookie-->
-  <div id="cook">
-    <div class="cook">您当前的位置：<a href="http://www.yeshengtao.com/">首页</a> &nbsp;&nbsp;>&nbsp;&nbsp;<a href="#">本届风采</a></div>
-    <div class="cook_line"></div>
-  </div>
-  <div id="cont"> 
-    <!--left-->
-    <div id="left" style="margin-right:40px;">
-    <div class="leftbt">
-        <img src="http://www.yeshengtao.com/images/bt06.png">
-        </div>
-    <div class="shadow"></div>
-    <div class="leftbt"><img src="http://www.yeshengtao.com/images/bt03.png"></div>
-    <div class="bmbox" style="display: none;">
-      <div class="bm">
-        <ul>
-	        <li><a href="#">查询成绩</a></li>
-	        <li><a href="#">参赛报名</a></li>
-	        <li><a href="#">上传作品</a></li>
-        </ul>
-        <div class="clear"></div>
-      </div>
+<!--cookie-->
+    <div id="cook">
+        <div class="cook">您当前的位置：<a href="http://www.yeshengtao.com/">首页</a> &nbsp;&nbsp;>&nbsp;&nbsp;<a href="#">本届风采</a></div>
+        <div class="cook_line"></div>
     </div>
-  	<div class="l_list">
-		<ul>
-  			<li><a href="http://www.yeshengtao.com/introduce/login/">报名方式</a></li>
-		</ul>
-  	</div>
-    <div class="shadow"></div>
-    </div>
-    <!--right-->
-    <div id="right">
-      <div class="right">
-        <div class="title">
-          <ul>
-            <li class="font24">本届风采</li>
-            <li class="font18 title_en">News</li>
-          </ul>
-          <div class="clear"></div>
-          <div class="r_line"></div>
-        </div>
-        <div class="r_cont">
-        
-                  <div class="cont_list">
-            <ul>
-              <li style="margin-right:20px;"> <img style="width: 171px;height: 124px;" src="http://image.yeshengtao.com/image/topics/201708/sign6.jpg"> </li>
-              <li class="r_text rw"> <a href="/news/201708/402.html">
-                <p>“第九届叶圣陶中小学生听说读写能力展示暨首届中小学优...</p>
-                </a> <a href="/news/201708/402.html"> <span>7月12日上午10时，“叶圣陶中小学生听说读写能力展示暨中小学优秀指导教师评选活动”的合作协议成功签订，中国教育学会将大力支持该项活动，同时“第九届叶圣陶中小学生听说读写能力”也正式开启。</span></a> </li>
-            </ul>
-            <div class="clear"></div>
-          </div>
-                  <div class="cont_list">
-            <ul>
-              <li style="margin-right:20px;"> <img style="width: 171px;height: 124px;" src="http://image.yeshengtao.com/image/topics/201703/2121.jpg"> </li>
-              <li class="r_text rw"> <a href="/news/201703/390.html">
-                <p>第八届叶圣陶能力展示命题组会议</p>
-                </a> <a href="/news/201703/390.html"> <span>2017年3月29号，第八届叶圣陶能力展示命题组召开会议，命题老师汇报了命题进度，展示了部分题型，分享在命题过程中的思考。各位老师对同步辅导资料进行了商讨，研究了在线答题模式，制定了下一步工作安排以及时间安排，为活动顺利进行保驾护航。</span></a> </li>
-            </ul>
-            <div class="clear"></div>
-          </div>
-                  <div class="cont_list">
-            <ul>
-              <li style="margin-right:20px;"> <img style="width: 171px;height: 124px;" src="http://image.yeshengtao.com/image/topics/201704/002.jpg"> </li>
-              <li class="r_text rw"> <a href="/news/201703/383.html">
-                <p>第八届叶圣陶能力展示确定题型</p>
-                </a> <a href="/news/201703/383.html"> <span>3月21日，第八届叶圣陶听说读写能力展示小学命题组召开会议。此次会议的主要内容是研究并学习往届大赛题型，确定本届题型。小学命题组组长赵士英老师首先阐述了现阶段我国语文教育的核心素养，之后命题组长吴琳老师和其他命题老师一起分析了往届比赛的题目，并进行讨论。最后，赵士英老师...</span></a> </li>
-            </ul>
-            <div class="clear"></div>
-          </div>
-                  <div class="cont_list">
-            <ul>
-              <li style="margin-right:20px;"> <img style="width: 171px;height: 124px;" src="http://image.yeshengtao.com/image/topics/201704/pic02.jpg"> </li>
-              <li class="r_text rw"> <a href="/news/201703/357.html">
-                <p>第八届能力展示中学命题组研讨会</p>
-                </a> <a href="/news/201703/357.html"> <span>第八届叶圣陶听说读写能力展示中学命题组第一次研讨会于2017年3月13号召开。命题组根据本届主题和口号制定了命题原则，并初步讨论了考试类型和考试内容。</span></a> </li>
-            </ul>
-            <div class="clear"></div>
-          </div>
-                  <div class="cont_list">
-            <ul>
-              <li style="margin-right:20px;"> <img style="width: 171px;height: 124px;" src="http://image.yeshengtao.com/image/topics/201704/001.jpg"> </li>
-              <li class="r_text rw"> <a href="/news/201703/351.html">
-                <p>第八届叶圣陶听说读写能力展示专家会</p>
-                </a> <a href="/news/201703/351.html"> <span>在第107届“国际妇女节”来临之际，第八届叶圣陶听说读写能力展示于京召开第一次专家会议即启动会议。会议确定了本届主题为：扎中华文化根 铸拳拳中国心。确定口号为：中华少年 奋发自强 博古通今 实现梦想。</span></a> </li>
-            </ul>
-            <div class="clear"></div>
-          </div>
-                 
-        </div>
-        <!--分页-->
-        <div id="paging">
-          <div class="paging">
-           <li style="background:none;">共10条</li>
-                    <!-- 此处取得上页和下页的序号并做为变量输出-->
-                                                  <!-- 此处取得上页和下页的序号并做为变量输出-->
-                    
-          
-          <ul>
-          <li><a href="http://www.yeshengtao.com/show/index.html">上一页</a></li>
-                              <li><a href="http://www.yeshengtao.com/show/index.html">1</a></li>
-                    
-          <li style="background:#fcda21;" >2</li>
-                    </ul>
-         
-      
-            <div class="clear"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="clear"></div>
-  </div>
-</div>
-
-<!--foot-->
-
-<div id="foot">
-	<div class="footbox">
-	  <div class="foot">
-	    <div class="footbt"> <span><a href="http://www.yeshengtao.com/introduce/message/">活动介绍</a></span> <span><a href="http://www.yeshengtao.com/show/">本届风采</a></span> <span><a href="http://www.yeshengtao.com/history/">往届回顾</a></span> <span><a href="http://www.yeshengtao.com/question/">往届题库</a></span> <span><a href="http://www.yeshengtao.com/well/">优秀作品</a></span> <span><a href="http://www.yeshengtao.com/join/">加入我们</a></span> </div>
-	    <div class="foottext" style="text-align:center">北京龙杯信息技术有限公司&nbsp;&nbsp;|&nbsp;&nbsp;yeshengtao@longbei.com&nbsp;&nbsp;|&nbsp;&nbsp;北京市海淀区上地三街金隅嘉华大厦B座911A室
-            <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1264442331'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1264442331%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+    <div id="cont">
+        <!--left-->
+        <div id="left" style="margin-right:40px;">
+            <div class="leftbt">
+                <img src="http://www.yeshengtao.com/images/bt06.png">
             </div>
-	  </div>
-	</div>
-</div>
+            <div class="shadow"></div>
+            <div class="leftbt"><img src="http://www.yeshengtao.com/images/bt03.png"></div>
 
-<script type="text/javascript" src="http://www.yeshengtao.com/js/index_v3_a1.js"></script>
-</body>
-</html>
+            <div class="l_list">
+                <ul>
+                    <li><a href="http://www.yeshengtao.com/introduce/login/">报名方式</a></li>
+                </ul>
+            </div>
+            <div class="shadow"></div>
+        </div>
+        <!--right-->
+        <div id="right">
+            <div class="right">
+                <div class="title">
+                    <ul>
+                    <li class="font24">本届风采</li>
+                    <li class="font18 title_en">News</li>
+                    </ul>
+                    <div class="clear"></div>
+                    <div class="r_line"></div>
+                </div>
+                <div class="r_cont">
+                    <div class="cont_list">
+                        {% for item in ContentList %}
+                        <ul>
+                            <li style="margin-right:20px;"> <img style="width: 171px;height: 124px;" src="{{item.picture_url.url}}"> </li>
+                            <li class="r_text rw"> <a href="{{item.get_absolute_url}}">
+                            <p>{{item.title}}</p>
+                            </a> <a href="{{item.get_absolute_url}}"> <span>{{item.excerpt}}</span></a> </li>
+                        </ul>
+                        <div class="clear"></div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <!--分页-->
+                <div id="paging">
+                    <div class="paging">
+                        <li style="background:none;">共{{ContentList.paginator.num_pages}}页</li>
+                        <!-- 此处取得上页和下页的序号并做为变量输出-->
+                        <!-- 此处取得上页和下页的序号并做为变量输出-->
+                        <ul>
+                            {% if ContentList.has_previous %}
+                            <li><a href="?page={{ ContentList.previous_page_number }}">上一页</a></li>
+                            {% endif %}
+
+                            {% for pg in ContentList.paginator.page_range %}
+                                {% if ContentList.number == pg %}
+                                <li style="background:#fcda21;" >{{ pg }}</li>
+                                {% else %}
+                                <li><a href="?page={{ pg }}">{{ pg }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+
+                            {% if ContentList.has_next %}
+                            <li><a href="?page={{ ContentList.next_page_number }}">下一页</a></li>
+                            {% endif %}
+                        </ul>
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+{% endblock %}
+
+

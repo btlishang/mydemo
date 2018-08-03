@@ -24,6 +24,7 @@ class Category(MPTTModel):
 
 
 class Content(models.Model):
+    IMG_LINK = 'upload/1pic_hd.jpg'
 
     title = models.CharField('文章标题',max_length=70)
     body = RichTextUploadingField('文章内容')
@@ -32,7 +33,7 @@ class Content(models.Model):
     excerpt = RichTextField('摘要',max_length=200, blank=True,config_name='custom')
     category = models.ForeignKey(Category,verbose_name='分类')
     author = models.ForeignKey(User,verbose_name='作者')
-    picture_url = models.ImageField('标题图片',default='upload/1pic_hd.jpg', upload_to='upload', max_length=200)
+    picture_url = models.ImageField('标题图片',default=IMG_LINK, upload_to='upload', max_length=200)
     isshow = models.BooleanField('是否展示',default=False)
 
     def __str__(self):
@@ -46,13 +47,27 @@ class Content(models.Model):
     def get_absolute_url(self):
         return reverse('article:news', kwargs={'pk': self.pk})
 
+
 class Banner(models.Model):
 
     title = models.CharField('标题',max_length=100)
     image = models.ImageField('轮播图',upload_to='banner', max_length=400)
+    isshow = models.BooleanField('是否展示',default=False)
+    category = models.BooleanField('展示位置',default=False)
 
     class Meta:
         verbose_name_plural = '轮播图列表'
 
     def __str__(self):
         return self.title
+
+
+class Img(models.Model):
+
+    IMG_LINK = 'upload/1.jpeg'
+    image = models.ImageField('图片', upload_to='img', max_length=400,default=IMG_LINK)
+    isshow = models.BooleanField('是否展示', default=False)
+
+    class Meta:
+        verbose_name_plural = '图片管理'
+        ordering = ['id']  # 以ID作为排序

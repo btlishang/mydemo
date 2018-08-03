@@ -42,31 +42,20 @@
         <div class="anythingSlider">
           <div class="tWrapper" style="overflow: hidden; ">
             <ul>
-
+                {% for item in ShowList%}
                 <li>
                     <dl>
-                        <dt><a href="/news/201712/419.html"  target="_blank"><img style="width: 454px;height: 342px;" src="http://image.yeshengtao.com/image/topics/201712/tc2.jpg" ></a></dt>
+                        <dt><a href="{{item.get_absolute_url}}"  target="_blank"><img style="width: 454px;height: 342px;" src="{{item.picture_url.url}}" ></a></dt>
                         <dd>
-                            <h3 style="margin-left:27px; margin-top:30px;"><a href="http://www.yeshengtao.com/show/"  target="_blank"><img src="{% static 'article/image/this-t.png' %}"><br>
-                            </a></h3>
-                            <p class="bt"><a href="/news/201712/419.html">名人大家为活动题词  书法之美彰显文化魅力</a></p>
-                            <p class="hdx"><a href="/news/201712/419.html">龙蛇之笔洒墨香透纸背，寄托教育希望，展现文化魅力</a></p>
+                            <h3 style="margin-left:27px; margin-top:30px;"><a href="http://www.yeshengtao.com/show/"  target="_blank"><img src="{% static 'article/image/this-t.png' %}"><br></a></h3>
+                            <p class="bt"><a href="{{item.get_absolute_url}}">{{item.title|slice:"20"}}</a></p>
+
+                            <p class="hdx"><a href="{{item.get_absolute_url}}">{% autoescape off %}{{item.excerpt|slice:"60"}}{% endautoescape %}</a></p>
+
                         </dd>
                     </dl>
                 </li>
-
-                <li>
-                    <dl>
-                      <dt><a href="/news/201709/408.html"  target="_blank"><img style="width: 454px;height: 342px;" src="http://image.yeshengtao.com/image/topics/201709/中国教育学会函件.jpg" ></a></dt>
-                      <dd>
-                        <h3 style="margin-left:27px; margin-top:30px;"><a href="http://www.yeshengtao.com/show/"  target="_blank"><img src="{% static 'article/image/this-t.png' %}"><br>
-                          </a></h3>
-                        <p class="bt"><a href="/news/201709/408.html">活动得到中国教育学会等权威单位鼎力支持</a></p>
-                        <p class="hdx"><a href="/news/201709/408.html">本次活动的主办方：中国教育学会、中国教育电视台、中国语文报刊协会。在上述重量级、权威级单位的认可和支持下，本次活动开启啦！你，还不来么？</a></p>
-                      </dd>
-                    </dl>
-                </li>
-
+                {% endfor %}
             </ul>
           </div>
         </div>
@@ -99,106 +88,98 @@
       </div>
       <div class="clear"></div>
   </div>
-</div>
+
 
   <!--往届回顾 大赛题库-->
   <div style="margin-top:30px;">
     <div id="this" style="margin-right:40px; ">
-      <div class="this">
-        <div id="last">
-          <div class="lastbt"> <a href="http://www.yeshengtao.com/history/"><img src="{% static 'article/image/lastbt.png' %}"></a> </div>
-          <div class="sj"> <img src="{% static 'article/image/ico-sj.png' %}"> </div>
-          <div class="lastpic">
+        <div class="this">
+            <div id="last">
+                <div class="lastbt"> <a href="http://www.yeshengtao.com/history/"><img src="{% static 'article/image/lastbt.png' %}"></a> </div>
+                <div class="sj"> <img src="{% static 'article/image/ico-sj.png' %}"> </div>
+                <div class="lastpic">
 
-            <ul>
-                            <li><img src="http://image.yeshengtao.com/image/topics/201704/a.jpg" width="284" height="166"></li>
-                            <li><img src="http://image.yeshengtao.com/image/topics/201704/b.jpg" width="284" height="166"></li>
-                          </ul>
-          </div>
-          <div class="clear"></div>
-        </div>
-        <div id="award">
+                    <ul>
+                        {% for item in ShowImg %}
+                        <li><img src="{{ item.image.url}}" width="284" height="166"></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
 
-          <div class="award">
-            <div class="award_title"> <a href="http://www.yeshengtao.com/introduce/prize/"><img src="{% static 'article/image/awbt.png' %}"></a> </div>
-            <div class="awardpic"> <a href="http://www.yeshengtao.com/introduce/prize/"><img style="width: 266px;height: 123px;" src="http://image.yeshengtao.com/image/topics/201708/award9.jpg"></a> </div>
-            <div class="awardcont"><a href="">评审专家在各阶段根据考生成绩评选出不同比例的获...</a></div>
-          </div>
+            <div id="award">
+
+                <div class="award">
+                    <div class="award_title"> <a href="http://www.yeshengtao.com/introduce/prize/"><img src="{% static 'article/image/awbt.png' %}"></a> </div>
+                    <div class="awardpic"> <a href="http://www.yeshengtao.com/introduce/prize/"><img style="width: 266px;height: 123px;" src="http://image.yeshengtao.com/image/topics/201708/award9.jpg"></a> </div>
+                    <div class="awardcont"><a href="">评审专家在各阶段根据考生成绩评选出不同比例的获...</a></div>
+                </div>
+            </div>
+            <div class="clear"></div>
         </div>
-        <div class="clear"></div>
-      </div>
     </div>
     <div id="news">
-      <div class="news">
-        <div class="title">
-          <ul>
-            <li class="font24">往届题库</li>
-            <li class="font18 title_en">Questions</li>
-            <li class="more" style="  margin-left:180px;"><a href="http://www.yeshengtao.com/question/"><img src="{% static 'article/image/more.png' %}"></a></li>
-          </ul>
-          <div class="clear"></div>
-          <div class="line"></div>
-        </div>
-        <div class="list">
+        <div class="news">
+            <div class="title">
+                <ul>
+                    <li class="font24">往届题库</li>
+                    <li class="font18 title_en">Questions</li>
+                    <li class="more" style="  margin-left:180px;"><a href="http://www.yeshengtao.com/question/"><img src="http://www.yeshengtao.com/images/more.png"></a></li>
+                </ul>
+                <div class="clear"></div>
+                <div class="line"></div>
+            </div>
+            <div class="list">
 
-            <ul>
-                <li><a href="/news/201703/363.html">“叶圣陶杯”第五届中小学生听说读写大赛小学低年级...</a></li>
-                <li><a href="/news/201703/362.html">“叶圣陶杯”第六届中小学生听说读写大赛小学一年级...</a></li>
-                <li><a href="/news/201703/360.html">“叶圣陶杯”第三届中小学生听说读写大赛小学中年级...</a></li>
-                <li><a href="/news/201703/359.html">“叶圣陶杯”第三届中小学生听说读写大赛小学高年级...</a></li>
-                <li><a href="/news/201703/352.html">“叶圣陶杯”第三届中小学生听说读写大赛小学高年级...</a></li>
-                <li><a href="/news/201703/364.html">“叶圣陶杯”第五届中小学生听说读写大赛小学一年级...</a></li>
-            </ul>
-
+                <ul>
+                    {% for item in ShowQue%}
+                    <li><a href="{{item.get_absolute_url}}">{{item.title |slice:"27" }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
-      </div>
     </div>
     <div class="clear"></div>
   </div>
+
   <!--优秀作品-->
   <div class="excellent">
     <div class="exti"><img src="{% static 'article/image/exti.png' %}"></div>
     <div class="excont">
 
         <ul>
-
-            <li style="margin-right:30px;">
-                <div class="excontent" >
-                <div class="exbt"><span class="sz">
-                壹
-                </span> <span>听说读写优秀作品小学组《龟兔赛跑》</span></div>
-                <div class="ex_text"> <a href="/news/201703/374.html">乌龟和小兔子经历了一次又一次的赛跑，每次都会经历种种的磨难，结局也不尽相同，但是无论谁赢谁输，我们都会在比赛中学到很多，让我们成长很多。这一次赛跑，小作者另辟蹊径，给了我们一场别开面目的比赛，让我们一...</a> </div>
-                </div>
-            </li>
-
+            {% for item in ShowWell %}
+                {% if forloop.counter|divisibleby:2 %}
             <li>
-                <div class="excontent" >
-                <div class="exbt"><span class="sz">
-                贰
-                </span> <span>听说读写优秀作品小学组《龟兔第二次赛跑...</span></div>
-                <div class="ex_text"> <a href="/news/201703/373.html">第一次龟兔赛跑后，兔子拜师乌龟，经过几年的学习，兔子已经学会了乌龟的全部技巧，他们重新开始了比赛，但是兔子还是一次又一次的输掉了比赛，是什么原因让兔子一直输下去了呢？让我们一起来观看吧！</a> </div>
-                </div>
-            </li>
-
+                {% else %}
             <li style="margin-right:30px;">
+                {% endif %}
                 <div class="excontent" >
-                <div class="exbt"><span class="sz">
-                叁
-                </span> <span>听说读写优秀作品小学组《读书真好》</span></div>
-                <div class="ex_text"> <a href="/news/201703/370.html"> "书是人类进步的阶梯"著名文学家高尔基是这样评价书的；"问渠那得清如许，为有源头活水来"这是我国教育家朱熹对学习的评价。在我们的生活中，书，无处不在。每个人对书的理解、认识都是不同，书带给我们的感受...</a> </div>
+                    <div class="exbt">
+                        {% if forloop.first %}
+                        <span class="sz">壹</span>
+                        {% elif forloop.counter == 2 %}
+                        <span class="sz">贰</span>
+                        {% elif forloop.counter == 3 %}
+                        <span class="sz">叁</span>
+                        {% elif forloop.last %}
+                        <span class="sz">肆</span>
+                        {% endif %}
+                        <span>{{item.title|truncatechars:21}}</span>
+                    </div>
+                    <div class="ex_text">
+                        {% autoescape off %}
+                        <a href="{{item.get_absolute_url}}">{{item.excerpt|truncatechars:100}}</a>
+                        {% endautoescape %}
+                    </div>
                 </div>
             </li>
-
-            <li>
-                <div class="excontent" >
-                <div class="exbt"><span class="sz">
-                肆</span> <span>听说读写优秀作品小学组《第二次龟兔赛跑...</span></div>
-                <div class="ex_text"> <a href="/news/201703/369.html">龟兔第一次赛跑以后，兔子很不服气，再次找到了乌龟要求进行重新赛跑。这一次比赛场地由乌龟确定，可乌龟没有选在水中，依旧选择的是陆地，但是最终依旧是乌龟赢得了比赛，这到底是为什么呢？让我们一起欣赏吧。</a> </div>
-                </div>
-            </li>
+            {% endfor %}
 
         </ul>
       <div class="clear"></div>
     </div>
   </div>
+</div>
 {% endblock %}
